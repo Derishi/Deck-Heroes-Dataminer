@@ -9,7 +9,7 @@ for(var message in messages){
 	messageBundle[message] = messages[message]["msgstr"][0];
 }
 
-fs.writeFile('./files/en_us_JSON.json', JSON.stringify(messageBundle, null, 4), function(err){
+fs.writeFile('./files/output/msgBundle.json', JSON.stringify(messageBundle, null, 4), function(err){
 	if(err) return console.log(err);
-	console.log("Created file en_us_JSON.txt");
+	console.log("Created file msgBundle.json");
 });
